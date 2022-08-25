@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head><title>URL Blocker Settings</title></head>
+
+<body>
+
+<link rel="stylesheet" href="options.css">
+
+<div id="settingsForm" unselectable="on" class="unselectable">
+	<div id="title">
+	<h1>URL Blocker Settings</h1>
+	Use regular expressions to block URLs:
+	<ul>
+		<li>by simply using <i><b>someevildomain.com</i></b></li>
+		<li>or more complex statements like  <i><b>(.*\.)?someevildomain\.com([\/?#&].*)?$</i></b></li>
+	</ul>
+	</div>
+
+	<div id="itemList">
+		<select id="itemListSelect" size="5">
+		</select>
+	</div>
+
+	<div id="controls">
+		<div id="url">
+			Regex: <input id="urlInput"/>
+		</div>
+		<div id="buttons">
+			<button id="addButton">Add</button>
+			<button id="removeButton">Remove</button>
+		</div>
+	</div>
+	
+	<div id="info">
+		To edit an existing entry use double click.
+	</div>
+	
+	<div id="regexTesting">
+	    <b>Test a URL against the regular expression in the input field above:</b>
+		<table>
+			<tr>
+			 <td>URL:
+			 <td> <input id="testURLInput" class="testInput"/>
+			</tr>		
+			<tr>
+			 <td>Result:
+			 <td><div id="result"></div>
+			</tr>
+		</table>
+	</div>
+
+	<!--<div id="save">
+		<button id="saveButton">Save</button>
+	</div>-->
+</div>
+<script src="options.js"></script>
+</body>
+</html>
