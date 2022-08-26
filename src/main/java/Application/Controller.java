@@ -16,6 +16,7 @@ public class Controller {
     }
 
     public void openChrome() {
+        profiles.clear();
         for (int i = 0; i < thread; i++) {
             profiles.add(new Profile());
         }
